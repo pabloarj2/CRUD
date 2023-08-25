@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Consulta de Endereço por CEP</title>
+    <!-- Adicione o link para o Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container py-5">
+        <h1 class="text-center mb-4">Consulta de Endereço por CEP</h1>
+        
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="mb-4">
+                    <h2 class="text-center">Buscar Endereço por CEP</h2>
+                    <div class="input-group">
+                        <input type="text" id="cepInput" class="form-control" placeholder="Digite o CEP">
+                        <button id="searchButton" class="btn btn-primary">Buscar</button>
+                    </div>
+                </div>
+                
+                <div id="resultContainer" class="hidden">
+                    <h2 class="text-center">Resultado da Busca</h2>
+                    <p><strong>Logradouro:</strong> <span id="logradouro"></span></p>
+                    <p><strong>Bairro:</strong> <span id="bairro"></span></p>
+                    <p><strong>Cidade:</strong> <span id="cidade"></span></p>
+                    <p><strong>Estado:</strong> <span id="estado"></span></p>
+                    <p><strong>CEP:</strong> <span id="cepResult"></span></p>
+                    <button id="addButton" class="btn btn-success">Adicionar ao Banco de Dados</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-8">
+                <h2 class="text-center mb-3">Ceps Cadastrados</h2>
+                <div class="table-responsive">
+                    <table id="userTable" class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Logradouro</th>
+                                <th>Bairro</th>
+                                <th>Cidade</th>
+                                <th>Estado</th>
+                                <th>CEP</th>
+                                <th>Ação</th>
+                            </tr>
+                        </thead>
+                        <tbody id="userList"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Adicione o link para o Bootstrap JS (popper.js é necessário para os componentes que requerem popovers) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
